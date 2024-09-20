@@ -1,0 +1,181 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+}
+body{
+    background-color: #D1E9F6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+.container{
+    position: relative;
+    width: 70%;
+    max-width: 1000px;
+    min-height: 800px;
+    margin: 50px;
+    background-color: rgba(240, 248, 255, 0.877);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0,1);
+
+}
+.container .leftside{
+    background: #FFF;
+    position: relative;
+    padding: 40px;
+    
+}
+.container .rightside{
+    background: #1A4870;
+    position: relative;
+    padding: 40px;
+}
+.leftside h2{
+    color: #1A4870;
+}
+/* ------------------------------------------------------ */
+.profile{
+    color: aliceblue;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.profile .image_box{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile .image_box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* -------------------------------------------------------------------------------- */
+.profile h2{
+    color: #FFF;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4rem;
+}
+.contact_info{
+    font-weight: 40px;
+    
+    
+}
+.contact_info .number{
+    color: #D1E9F6;
+    
+}
+
+.contact_info .icon{
+    color:darkorange;
+    
+}
+.contact_info li{
+    color: azure;
+}
+.leftside h1{
+    text-align: center;
+    font-weight: bold;
+    background-color:cornflowerblue;
+    text-transform: uppercase;
+}
+h1{
+    color: azure;
+    text-decoration-line: underline;
+
+}
+#toggleButton{
+    width: 200px;
+    padding: 5px;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+    border-radius: 8px;
+    background: #1A4870;
+    border: none;
+    color: azure;
+    font-weight: bold;
+}
+/* Responsive Media Queries */
+
+/* For tablets and small screens (less than 992px wide) */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .leftside, .rightside {
+        flex: 1;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .image_box img {
+        max-width: 150px;
+    }
+
+    .rightside {
+        padding: 10px;
+    }
+}
+
+/* For mobile devices (less than 768px wide) */
+@media (max-width: 768px) {
+    h1, h2, h3 {
+        font-size: 1.2em;
+    }
+
+    .leftside, .rightside {
+        padding: 5px;
+    }
+
+    .image_box img {
+        max-width: 100px;
+    }
+
+    ul {
+        padding-left: 10px;
+    }
+}
+
+/* For very small devices (less than 480px wide) */
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+
+    .leftside, .rightside {
+        flex: 1;
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .image_box img {
+        max-width: 80px;
+    }
+
+    ul {
+        padding-left: 5px;
+    }
+}
